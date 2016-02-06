@@ -1,0 +1,24 @@
+{
+  "name": "site-demo",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src --source-maps --out-dir lib --copy-files --presets es2015 --plugins transform-es2015-modules-umd",
+    "start": "npm run build && opn index.html",
+    "start:dev": "npm run build -- --watch & opn index.html"
+  },
+  "author": "Marcus Stade <marcus@stade.se> (http://madebystade.se/)",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "6.4.5",
+    "babel-plugin-transform-es2015-modules-umd": "6.4.3",
+    "babel-preset-es2015": "6.3.13",
+    "opn-cli": "3.0.1"
+  },
+  "dependencies": {
+    "todomvc-app-css": "2.0.4",
+    "todomvc-common": "1.0.2"
+  }
+}
